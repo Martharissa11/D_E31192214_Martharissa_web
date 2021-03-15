@@ -1,39 +1,27 @@
-<?PHP
-//Declare class
+<?php
 class Car {
+	
 	//properties
 	public $comp;
 	public $color = 'beige';
 	public $hasSunRoof = true;
-
+	
 	//method = hello
-	public function hello ()
+	public function hello()
 	{
-		return "beep";
+		return "Beep I am a <i>".$this -> comp."</i>, and I am <i>".$this -> color;
 	}
 }
 
-//Membuat instance
-$bmw = new Car ();
-$mercedes = new Car ();
+//create object di class.
+$bmw = new Car();
+$mercedes = new Car();
 
-// Get values
-echo $bmw -> color; // beige
-echo "<br />";
-echo $mercedes -> color; //beige
-echo "<hr />";
-
-// Set values
+//set values dari class properties.
 $bmw -> color = 'blue';
 $bmw -> comp = "BMW";
 $mercedes -> comp = "Mercedes Benz";
 
-// Get values
-echo $bmw -> color; // blue
-echo "<br />";
-echo $mercedes -> color; //beige
-echo "<br />";
-echo $bmw -> comp; // BMW
-echo "<br />";
-echo $mercedes -> comp // Mercedes Benz
+//call hello method untuk $bmw object.
+echo $bmw -> hello();
 ?>
